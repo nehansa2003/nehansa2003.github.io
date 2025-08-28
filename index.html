@@ -9,11 +9,11 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(135deg, #f4f6f9, #e8f0ff);
+      background: linear-gradient(135deg, #f9f9f9, #e8f7e8);
       color: #333;
     }
     header {
-      background: linear-gradient(135deg, #4a90e2, #007acc);
+      background: linear-gradient(135deg, #004080, #007acc, #00a859);
       color: white;
       padding: 30px;
       text-align: center;
@@ -28,12 +28,12 @@
     nav a {
       margin: 0 15px;
       text-decoration: none;
-      color: #ffe;
+      color: #ffeb3b; /* Yellow links */
       font-weight: bold;
       transition: color 0.3s;
     }
     nav a:hover {
-      color: #ffcc00;
+      color: #00ff99; /* Green hover */
     }
     section {
       max-width: 900px;
@@ -44,30 +44,33 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
     h2 {
-      color: #007acc;
+      color: #004080;
       margin-bottom: 15px;
-      border-bottom: 2px solid #4a90e2;
+      border-bottom: 2px solid #00a859;
       display: inline-block;
       padding-bottom: 5px;
     }
-    .skills span {
-      display: inline-block;
-      margin: 8px;
-      padding: 10px 15px;
-      background: #4a90e2;
-      color: white;
-      border-radius: 25px;
-      font-size: 14px;
+    .skills ul {
+      list-style: square;
+      padding-left: 20px;
+    }
+    .skills li {
+      margin: 8px 0;
+      font-size: 16px;
+      padding: 6px;
+      background: #e6f7e6;
+      border-left: 5px solid #00a859;
+      border-radius: 4px;
       transition: 0.3s;
     }
-    .skills span:hover {
-      background: #007acc;
-      transform: scale(1.1);
+    .skills li:hover {
+      background: #ccffcc;
+      transform: translateX(5px);
     }
     .project-card {
       background: #f9fbff;
       padding: 15px;
-      border-left: 5px solid #4a90e2;
+      border-left: 5px solid #004080;
       margin-bottom: 15px;
       border-radius: 8px;
       transition: 0.3s;
@@ -80,7 +83,7 @@
       text-align: center;
       padding: 20px;
       margin-top: 30px;
-      background: #333;
+      background: #004080;
       color: white;
     }
     footer p {
@@ -91,7 +94,7 @@
 <body>
   <!-- Header -->
   <header>
-    <h1>Hello, I'm Nehansa Wijewardhana👋</h1>
+    <h1>Hello, I'm Nehansa Wijewardhana 👋</h1>
     <p>💻 Data Science Student | 🌐 Web Developer | 🤖 AI Enthusiast</p>
     <nav>
       <a href="#about">About</a>
@@ -138,13 +141,15 @@
   <!-- Skills -->
   <section id="skills" class="skills">
     <h2>Skills</h2>
-    <span>Python</span>
-    <span>Java</span>
-    <span>JavaScript</span>
-    <span>React</span>
-    <span>Django</span>
-    <span>SQL</span>
-    <span>Git & GitHub</span>
+    <ul>
+      <li>Python</li>
+      <li>Java</li>
+      <li>JavaScript</li>
+      <li>React</li>
+      <li>Django</li>
+      <li>SQL</li>
+      <li>Git & GitHub</li>
+    </ul>
   </section>
 
   <!-- Contact -->
@@ -162,4 +167,3 @@
   </footer>
 </body>
 </html>
-
