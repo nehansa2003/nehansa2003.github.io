@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nehansa | Portfolio</title>
+
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -11,49 +12,68 @@
       padding: 0;
       background: linear-gradient(135deg, #f9f9f9, #e8f7e8);
       color: #333;
+      line-height: 1.6;
     }
+
     header {
       background: linear-gradient(135deg, #004080, #007acc, #00a859);
       color: white;
       padding: 30px;
       text-align: center;
     }
+
     header h1 {
       margin: 10px 0;
       font-size: 2.2rem;
     }
+
     nav {
       margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
     }
+
     nav a {
-      margin: 0 15px;
+      margin: 0 10px;
       text-decoration: none;
-      color: #ffeb3b; /* Yellow links */
+      color: #ffeb3b;
       font-weight: bold;
       transition: color 0.3s;
     }
+
     nav a:hover {
-      color: #00ff99; /* Green hover */
+      color: #00ff99;
     }
+
     section {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 40px auto;
       padding: 25px;
       background: white;
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
+
     h2 {
       color: #004080;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
       border-bottom: 2px solid #00a859;
       display: inline-block;
       padding-bottom: 5px;
     }
+
+    h3 {
+      color: #004080;
+      margin-top: 0;
+    }
+
     .skills ul {
       list-style: square;
       padding-left: 20px;
     }
+
     .skills li {
       margin: 8px 0;
       font-size: 16px;
@@ -63,22 +83,70 @@
       border-radius: 4px;
       transition: 0.3s;
     }
+
     .skills li:hover {
       background: #ccffcc;
       transform: translateX(5px);
     }
+
     .project-card {
       background: #f9fbff;
-      padding: 15px;
+      padding: 20px;
       border-left: 5px solid #004080;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
       border-radius: 8px;
       transition: 0.3s;
     }
+
     .project-card:hover {
       background: #eef6ff;
-      transform: translateX(5px);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 14px rgba(0, 64, 128, 0.08);
     }
+
+    .project-card p {
+      margin: 10px 0;
+    }
+
+    .project-type {
+      display: inline-block;
+      background: #e6f7e6;
+      color: #006b3c;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .tech-stack {
+      color: #444;
+      font-size: 14px;
+    }
+
+    .project-link {
+      display: inline-block;
+      margin-top: 8px;
+      color: #0066cc;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .project-link:hover {
+      color: #00a859;
+      text-decoration: underline;
+    }
+
+    .section-intro {
+      color: #666;
+      margin-top: -10px;
+      margin-bottom: 25px;
+    }
+
+    a {
+      overflow-wrap: anywhere;
+    }
+
     footer {
       text-align: center;
       padding: 20px;
@@ -86,16 +154,39 @@
       background: #004080;
       color: white;
     }
+
     footer p {
       margin: 5px;
     }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 25px 15px;
+      }
+
+      header h1 {
+        font-size: 1.7rem;
+      }
+
+      section {
+        margin: 20px 12px;
+        padding: 18px;
+      }
+
+      nav a {
+        margin: 5px;
+      }
+    }
   </style>
 </head>
+
 <body>
+
   <!-- Header -->
   <header>
     <h1>Hello, I'm Nehansa Wijewardhana 👋</h1>
     <p>💻 Data Science Student | 🌐 Web Developer | 🤖 AI Enthusiast</p>
+
     <nav>
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
@@ -107,116 +198,452 @@
   <!-- About -->
   <section id="about">
     <h2>About Me</h2>
+
     <p>
-      I’m currently studying <b>BSc Hons in Data Science</b> at the Faculty of Computing, 
-      Sabaragamuwa University of Sri Lanka. I’m passionate about <b>AI, Web Development, 
-      and Data Science</b>. I enjoy building projects that solve real-world problems and 
-      make life easier for people. <br><br>
-      🚀 My goal is to become a <b>Full-Stack Developer and Data Engineer</b> who can 
-      bridge the gap between data and technology through impactful solutions.
+      I'm currently studying <b>BSc Hons in Data Science</b> at the Faculty
+      of Computing, Sabaragamuwa University of Sri Lanka. I'm passionate about
+      <b>AI, Web Development, and Data Science</b>. I enjoy building projects
+      that solve real-world problems and make life easier for people.
+      <br><br>
+      🚀 My goal is to become a
+      <b>Full-Stack Developer and Data Engineer</b> who can bridge the gap
+      between data and technology through impactful solutions.
     </p>
   </section>
 
   <!-- Projects -->
   <section id="projects">
     <h2>Projects</h2>
+
+    <p class="section-intro">
+      Explore my academic, machine learning, data analytics, and full-stack
+      development projects.
+    </p>
+
+    <!-- Existing Project 1 -->
     <div class="project-card">
-      <h3>📌 Doc & Test Hub</h3>
+      <h3>📌 Doc &amp; Test Hub</h3>
+
       <p>
-        A full-stack web application built using <b>React, Django, and MySQL</b> that allows 
-        patients to easily book doctor appointments and schedule medical tests.  
-        Features include <b>real-time slot availability, appointment reminders, 
-        secure payments, and test requirement validation</b>.
+        A full-stack web application built using
+        <b>React, Django, and MySQL</b> that allows patients to book doctor
+        appointments and schedule medical tests. Features include
+        <b>real-time slot availability, appointment reminders, secure payments,
+        and test requirement validation</b>.
       </p>
-       <b>GitHub Repository:</b> <a href="https://github.com/nehansa2003/Doc-Test-Hub" target="_blank">View Project</a>
+
+      <p class="tech-stack">
+        <b>Technologies:</b> React, Django, MySQL
+      </p>
+
+      <a class="project-link"
+         href="https://github.com/nehansa2003/Doc-Test-Hub"
+         target="_blank" rel="noopener noreferrer">
+        View GitHub Repository →
+      </a>
     </div>
+
+    <!-- Existing Project 2 -->
     <div class="project-card">
       <h3>📌 To-Do Task Manager</h3>
-      <p>
-        A Python-based CLI project designed for productivity. Supports <b>task creation, 
-        deadlines, updates, and persistence using JSON</b>. Built with <b>object-oriented programming</b> concepts.
-      </p>
-       <b>GitHub Repository:</b> <a href="https://github.com/nehansa2003/To-Do-Task-Manager-python-program" target="_blank">View Project</a>
-    </div>
-    <div class="project-card">
-    <h3>📌 SoulPrint: 16-Trait Personality Tracker</h3>
-    <p>
-      A web-based personality predictor that generates a <b>16-trait personality report in PDF format</b> 
-      using <b>JavaScript</b> and <b>jsPDF</b>. The report includes <b>personality summary, strengths, weaknesses, 
-      motivational quotes, and styled visuals</b>. Users can download their report as <b>SoulPrint_Personality_Report.pdf</b>.
-    </p>
-    <p><b>Key Features:</b> Personalized summary, bullet-point strengths & weaknesses, motivational quote, calm pastel PDF background, optional footer image.</p>
-       <b>GitHub Repository:</b> <a href="https://github.com/nehansa2003/SoulPrint" target="_blank">View Project</a>
-  </div>
-    <div class="project-card">
-  <h3>📌 Smart Waste Tracker: Full-Stack Waste Management System</h3>
-  <p>
-    A <b>full-stack smart waste management and analytics platform</b> developed as a 
-    <b>group project with two colleagues</b> using <b>PHP, MySQL, JavaScript, Tailwind CSS, and Chart.js</b>. 
-    The system supports <b>waste category tracking, waste amount recording, bin status monitoring, 
-    available bin visibility, public waste-category search, route optimization, and location-based waste management</b>.
-  </p>
-  <p>
-    <b>Key Features:</b> Area-wise and category-wise waste reports, 
-    daily/weekly/monthly/yearly analytics, waste trend visualization, 
-    category-per-area insights, interactive dashboard charts, responsive admin panel, 
-    and <b>PDF report generation for decision support</b>.
-  </p>
-      <b>GitHub Repository:</b> <a href="https://github.com/nehansa2003/Smart-Waste-Management-Tracker" target="_blank">View Project</a>
-</div>
 
+      <p>
+        A Python-based command-line application designed for productivity.
+        Supports <b>task creation, deadlines, task updates, and JSON-based
+        data persistence</b>. Developed using object-oriented programming
+        concepts.
+      </p>
+
+      <p class="tech-stack">
+        <b>Technologies:</b> Python, JSON, Object-Oriented Programming
+      </p>
+
+      <a class="project-link"
+         href="https://github.com/nehansa2003/To-Do-Task-Manager-python-program"
+         target="_blank" rel="noopener noreferrer">
+        View GitHub Repository →
+      </a>
+    </div>
+
+    <!-- Existing Project 3 -->
     <div class="project-card">
-  <h3>📌 Student Stress Level Prediction – Data Analysis Project</h3>
-  <p>
-    A <b>data-driven project analyzing factors affecting student stress levels</b>. 
-    The project involved <b>data cleaning, feature engineering, outlier detection, standardization, and normalization</b>. 
-    Developed <b>new features</b> such as Study Efficiency, Sleep Stress Risk, Study Burden Index, 
-    and Study–Sleep Balance to better understand student behavior.
-  </p>
-  <p>
-    <b>Key Features:</b> 
-    Trained and evaluated multiple machine learning models, 
-    visualized <b>Actual vs Predicted stress levels</b> and error distributions, 
-    and selected the best-performing model. 
-    Deployed a <b>Flask web application</b> where users can input academic and lifestyle factors 
-    to instantly receive a predicted stress level.
-  </p>
-  <p>
-    <b>Technologies Used:</b> Python, Pandas, Scikit-learn, Flask, Matplotlib, Seaborn
-  </p>
-  <p>
-    <b>GitHub Repository:</b> <a href="https://github.com/nehansa2003/Student-StressLevel-Prediction-Analysis" target="_blank">View Project</a>
-  </p>
-</div>
+      <h3>📌 SoulPrint: 16-Trait Personality Tracker</h3>
+
+      <p>
+        A web-based personality predictor that generates a
+        <b>16-trait personality report in PDF format</b> using JavaScript
+        and jsPDF. The report includes a personality summary, strengths,
+        weaknesses, motivational quotes, and styled visuals.
+      </p>
+
+      <p>
+        <b>Key Features:</b> Personalized summaries, bullet-point strengths
+        and weaknesses, motivational quotes, a calm pastel PDF background,
+        and an optional footer image.
+      </p>
+
+      <p class="tech-stack">
+        <b>Technologies:</b> JavaScript, jsPDF, HTML, CSS
+      </p>
+
+      <a class="project-link"
+         href="https://github.com/nehansa2003/SoulPrint"
+         target="_blank" rel="noopener noreferrer">
+        View GitHub Repository →
+      </a>
+    </div>
+
+    <!-- Existing Project 4 -->
+    <div class="project-card">
+      <h3>📌 Smart Waste Tracker: Full-Stack Waste Management System</h3>
+
+      <span class="project-type">Group Project</span>
+
+      <p>
+        A full-stack waste management and analytics platform developed
+        collaboratively with two colleagues. The system supports
+        <b>waste category tracking, waste amount recording, bin status
+        monitoring, available bin visibility, public waste-category search,
+        route optimization, and location-based waste management</b>.
+      </p>
+
+      <p>
+        <b>Key Features:</b> Area-wise and category-wise reports, daily,
+        weekly, monthly, and yearly analytics, waste trend visualizations,
+        interactive dashboard charts, a responsive admin panel, and
+        PDF report generation for decision support.
+      </p>
+
+      <p class="tech-stack">
+        <b>Technologies:</b> PHP, MySQL, JavaScript, Tailwind CSS, Chart.js
+      </p>
+
+      <a class="project-link"
+         href="https://github.com/nehansa2003/Smart-Waste-Management-Tracker"
+         target="_blank" rel="noopener noreferrer">
+        View GitHub Repository →
+      </a>
+    </div>
+
+    <!-- Existing Project 5 -->
+    <div class="project-card">
+      <h3>📌 Student Stress Level Prediction – Data Analysis Project</h3>
+
+      <p>
+        A data-driven project analyzing factors affecting student stress
+        levels. The project involved <b>data cleaning, feature engineering,
+        outlier detection, standardization, and normalization</b>.
+        New features included Study Efficiency, Sleep Stress Risk,
+        Study Burden Index, and Study–Sleep Balance.
+      </p>
+
+      <p>
+        <b>Key Features:</b> Training and evaluation of multiple machine
+        learning models, actual-versus-predicted visualizations, error
+        distribution analysis, and a Flask web application that predicts
+        stress levels from academic and lifestyle inputs.
+      </p>
+
+      <p class="tech-stack">
+        <b>Technologies:</b> Python, Pandas, Scikit-learn, Flask,
+        Matplotlib, Seaborn
+      </p>
+
+      <a class="project-link"
+         href="https://github.com/nehansa2003/Student-StressLevel-Prediction-Analysis"
+         target="_blank" rel="noopener noreferrer">
+        View GitHub Repository →
+      </a>
+    </div>
+
+    <!-- New Project 1: Sales Forecasting -->
+    <div class="project-card">
+      <h3>📈 Time Series Sales Forecasting</h3>
+
+      <span class="project-type">Time Series Analysis</span>
+
+      <p>
+        A time series analysis project focused on identifying sales trends,
+        seasonality, and variability in historical sales data and forecasting
+        future monthly sales. Order data was aggregated into monthly sales
+        values for statistical analysis and model development.
+      </p>
+
+      <p>
+        <b>Key Features:</b> Exploratory time series analysis, rolling mean
+        and variance analysis, seasonal decomposition, stationarity testing
+        using the Augmented Dickey-Fuller test, and comparison of forecasting
+        models using information criteria and residual diagnostics.
+      </p>
+
+      <p>
+        The project compares <b>ARIMA, SARIMA, and Holt–Winters Exponential
+        Smoothing</b>. According to the project evaluation, SARIMA achieved
+        the lowest AIC and BIC values among the evaluated models, with
+        well-behaved residuals.
+      </p>
+
+      <p class="tech-stack">
+        <b>Technologies:</b> Python, Pandas, NumPy, Matplotlib,
+        Statsmodels, Jupyter Notebook
+      </p>
+      <a class="project-link"
+         href=" https://github.com/nehansa2003/Amazon-sales-analysis"
+         target="_blank" rel="noopener noreferrer">
+        View GitHub Repository →
+      </a>
+     
+    </div>
+
+    <!-- New Project 2: Game Review Intelligence -->
+    <div class="project-card">
+      <h3>🎮 Game Review Intelligence</h3>
+
+      <span class="project-type">Natural Language Processing</span>
+
+      <p>
+        An NLP-based system that analyzes video game reviews to generate
+        meaningful insights about player opinions, sentiment, and game
+        features. The project covers <b>2,000 video games and 100,027
+        processed reviews</b>.
+      </p>
+
+      <p>
+        <b>Key Features:</b> Positive, neutral, and negative sentiment
+        classification, aspect frequency and sentiment analysis, automatic
+        key phrase extraction, advantages and disadvantages identification,
+        key review points, and game-to-game comparisons.
+      </p>
+
+      <p>
+        The project compares Balanced Logistic Regression, Balanced Linear
+        SVM, and DistilBERT. DistilBERT is used as the final sentiment model,
+        with threshold optimization to improve minority-class detection.
+        An interactive Gradio dashboard presents the review insights.
+      </p>
+
+      <p class="tech-stack">
+        <b>Technologies:</b> Python, Pandas, NumPy, Scikit-learn,
+        Transformers, DistilBERT, YAKE, Plotly, Gradio, Google Colab
+      </p>
+
+      <p>
+        <b>Dataset:</b>
+        <a href="https://drive.google.com/file/d/19dgBjbdSuQQImXy6ePW9v0Z895MfM60b/view?usp=drive_link"
+           target="_blank" rel="noopener noreferrer">
+          Access the raw dataset on Google Drive
+        </a>
+      </p>
+      <a class="project-link"
+         href="https://github.com/nehansa2003/Video_Game-Review-intelligence"
+         target="_blank" rel="noopener noreferrer">
+        View GitHub Repository →
+      </a>
+      
+    </div>
+
+    <!-- New Project 3: Sri Lanka Economic Analysis -->
+    <div class="project-card">
+      <h3>📊 Sri Lanka Economic Crisis &amp; Recovery | 2018–2024</h3>
+
+      <span class="project-type">Power BI &amp; Data Analytics</span>
+
+      <p>
+        An economic data analysis project examining Sri Lanka's economic
+        crisis and recovery from 2018 to 2024 using Microsoft Power BI.
+        The dashboard explores economic trends and indicators to understand
+        the impact of the crisis and signs of economic stabilization.
+      </p>
+
+      <p>
+        <b>Key Areas Analysed:</b> Inflation, cost of living, food and fuel
+        prices, exchange rates, exports, imports, tourism, workers'
+        remittances, GDP growth, unemployment, and interest rates.
+      </p>
+
+      <p>
+        <b>Key Features:</b> Interactive dashboard, executive overview,
+        KPI cards, economic crisis timeline, inflation and cost-of-living
+        analysis, external-sector analysis, and economic growth, employment,
+        and monetary-condition visualizations.
+      </p>
+
+      <p>
+        The project involved collecting raw datasets, selecting relevant
+        records and columns, cleaning and standardizing data, and preparing
+        six datasets for Power BI analysis.
+      </p>
+
+      <p class="tech-stack">
+        <b>Technologies:</b> Microsoft Power BI, DAX, Microsoft Excel,
+        Data Cleaning, Data Visualization
+      </p>
+     <a class="project-link"
+         href="https://github.com/nehansa2003/Sri-Lanka-Economic-Crisis-Recovery-2018-2024--PowerBI"
+         target="_blank" rel="noopener noreferrer">
+        View GitHub Repository →
+      </a>
+     
+    </div>
+
+    <!-- New Project 4: Weather Capstone -->
+    <div class="project-card">
+      <h3>🌦️ Weather Analysis &amp; Localized Next-Hour Weather Forecasting System </h3>
+
+      <span class="project-type">BSc (Hons) Data Science Capstone </span>
+
+      <p>
+        A collaborative capstone project focused on historical weather
+        analysis and next-hour weather forecasting using hourly weather
+        data from 2020 to 2025 across five Sri Lankan districts:
+        Colombo, Gampaha, Galle, Kandy, and Jaffna.
+      </p>
+
+      <p>
+        The project includes an <b>LSTM-based multi-output forecasting
+        model</b> that uses the previous 24 hours of observations to predict
+        the next hour's weather conditions for Colombo.
+      </p>
+
+      <p>
+        <b>Forecasting Variables:</b> Temperature, humidity, pressure,
+        wind speed, rainfall, wind gust, cloud cover, solar radiation,
+        and dew point.
+      </p>
+
+      <p>
+        <b>Key Features:</b> Historical weather analysis, geographical
+        point selection, current weather information, next-hour forecasting,
+        model evaluation results, and rain/no-rain performance analysis
+        through a Streamlit dashboard.
+      </p>
+
+      <p>
+        The dataset was divided chronologically into training data
+        (2020–2023), validation data (2024), and testing data (2025).
+        The dashboard identifies the nearest predefined Colombo
+        geographical point for forecasting.
+      </p>
+
+      <p class="tech-stack">
+        <b>Technologies:</b> Python, Pandas, NumPy, Scikit-learn,
+        TensorFlow/Keras, Streamlit, Matplotlib, Seaborn, Open-Meteo API
+      </p>
+      <a class="project-link"
+         href="https://github.com/nehansa2003/Weather-Forecasting-and-Analysis-Using-LSTM"
+         target="_blank" rel="noopener noreferrer">
+        View GitHub Repository →
+      </a>
+      
+    </div>
+
+    <!-- New Project 5: ChurnIQ -->
+    <div class="project-card">
+      <h3>☁️ ChurnIQ: Enterprise Customer Churn Prediction &amp; Analytics</h3>
+
+      <span class="project-type">Group Project · Machine Learning &amp; AWS</span>
+
+      <p>
+        An end-to-end cloud-based machine learning and customer analytics
+        solution designed to identify customers at risk of leaving a
+        retail business. The system uses a dataset of
+        <b>100,000 retail customers</b> and combines predictive analytics,
+        serverless data processing, and interactive business intelligence.
+      </p>
+
+      <p>
+        <b>Machine Learning:</b> Compared Logistic Regression, Gradient
+        Boosting, Random Forest, and Extra Trees. The selected Logistic
+        Regression pipeline achieved <b>94.59% test accuracy and
+        99.04% ROC-AUC</b>, according to the project's evaluation.
+      </p>
+
+      <p>
+        <b>Cloud Data Pipeline:</b> Amazon S3 stores incoming and processed
+        data, AWS Lambda validates uploaded datasets, CloudWatch supports
+        execution monitoring, and Amazon Athena enables SQL-based analytics.
+      </p>
+
+      <p>
+        <b>Key Features:</b> Customer churn prediction, churn probability
+        scoring, customer risk visualization, business SQL analytics,
+        automated data validation, and an interactive dashboard with
+        actionable customer retention insights.
+      </p>
+
+      <p class="tech-stack">
+        <b>Technologies:</b> Python 3.11, Pandas, Scikit-learn, FastAPI,
+        Streamlit, Plotly, AWS S3, AWS Lambda, Amazon CloudWatch,
+        Amazon Athena, Docker
+      </p>
+
+      <a class="project-link"
+         href="https://github.com/nehansa2003/AWS_Project"
+         target="_blank" rel="noopener noreferrer">
+        View GitHub Repository →
+      </a>
+    </div>
+
   </section>
 
   <!-- Skills -->
   <section id="skills" class="skills">
     <h2>Skills</h2>
+
     <ul>
       <li>Python</li>
       <li>Java</li>
       <li>JavaScript</li>
       <li>React</li>
       <li>Django</li>
-      <li>Mysql</li>
+      <li>MySQL</li>
       <li>PHP</li>
-      <li>Git & GitHub</li>
+      <li>Git &amp; GitHub</li>
+      <li>Machine Learning &amp; Deep Learning</li>
+      <li>Data Analysis &amp; Data Visualization</li>
+      <li>Time Series Analysis &amp; Forecasting</li>
+      <li>Natural Language Processing (NLP)</li>
+      <li>TensorFlow / Keras</li>
+      <li>Microsoft Power BI &amp; DAX</li>
+      <li>Streamlit &amp; Flask</li>
+      <li>AWS Cloud Services</li>
+      <li>SQL &amp; Data Management</li>
     </ul>
   </section>
 
   <!-- Contact -->
   <section id="contact">
     <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:nehansawijewardhana@gmail.com">nehansawijewardhana@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/nehansa-wijewardhana-638649337/" target="_blank">linkedin.com/in/nehansa-wijewardhana</a></p>
-    <p>GitHub: <a href="https://github.com/nehansa2003" target="_blank">github.com/nehansa2003</a></p>
+
+    <p>
+      Email:
+      <a href="mailto:nehansawijewardhana@gmail.com">
+        nehansawijewardhana@gmail.com
+      </a>
+    </p>
+
+    <p>
+      LinkedIn:
+      <a href="https://www.linkedin.com/in/nehansa-wijewardhana-638649337/"
+         target="_blank" rel="noopener noreferrer">
+        linkedin.com/in/nehansa-wijewardhana
+      </a>
+    </p>
+
+    <p>
+      GitHub:
+      <a href="https://github.com/nehansa2003"
+         target="_blank" rel="noopener noreferrer">
+        github.com/nehansa2003
+      </a>
+    </p>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Nehansa | Built with ❤️ and GitHub Pages</p>
-    <p>Designed to grow as I learn & build 🚀</p>
+    <p>© 2026 Nehansa | Built with ❤️ and GitHub Pages</p>
+    <p>Designed to grow as I learn &amp; build 🚀</p>
   </footer>
+
 </body>
 </html>
