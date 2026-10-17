@@ -3,647 +3,370 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nehansa | Portfolio</title>
-
+  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="Nehansa Wijewardhana — Data Science undergraduate building machine learning, analytics, and full-stack projects.">
+  <title>Nehansa Wijewardhana | Portfolio</title>
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, #f9f9f9, #e8f7e8);
-      color: #333;
-      line-height: 1.6;
-    }
-
-    header {
-      background: linear-gradient(135deg, #004080, #007acc, #00a859);
-      color: white;
-      padding: 30px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 10px 0;
-      font-size: 2.2rem;
-    }
-
-    nav {
-      margin-top: 10px;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    nav a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #ffeb3b;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #00ff99;
-    }
-
-    section {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 25px;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    h2 {
-      color: #004080;
-      margin-bottom: 20px;
-      border-bottom: 2px solid #00a859;
-      display: inline-block;
-      padding-bottom: 5px;
-    }
-
-    h3 {
-      color: #004080;
-      margin-top: 0;
-    }
-
-    .skills ul {
-      list-style: square;
-      padding-left: 20px;
-    }
-
-    .skills li {
-      margin: 8px 0;
-      font-size: 16px;
-      padding: 6px;
-      background: #e6f7e6;
-      border-left: 5px solid #00a859;
-      border-radius: 4px;
-      transition: 0.3s;
-    }
-
-    .skills li:hover {
-      background: #ccffcc;
-      transform: translateX(5px);
-    }
-
-    .project-card {
-      background: #f9fbff;
-      padding: 20px;
-      border-left: 5px solid #004080;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      transition: 0.3s;
-    }
-
-    .project-card:hover {
-      background: #eef6ff;
-      transform: translateY(-3px);
-      box-shadow: 0 5px 14px rgba(0, 64, 128, 0.08);
-    }
-
-    .project-card p {
-      margin: 10px 0;
-    }
-
-    .project-type {
-      display: inline-block;
-      background: #e6f7e6;
-      color: #006b3c;
-      padding: 4px 10px;
-      border-radius: 20px;
-      font-size: 13px;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
-    .tech-stack {
-      color: #444;
-      font-size: 14px;
-    }
-
-    .project-link {
-      display: inline-block;
-      margin-top: 8px;
-      color: #0066cc;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    .project-link:hover {
-      color: #00a859;
-      text-decoration: underline;
-    }
-
-    .section-intro {
-      color: #666;
-      margin-top: -10px;
-      margin-bottom: 25px;
-    }
-
-    a {
-      overflow-wrap: anywhere;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      margin-top: 30px;
-      background: #004080;
-      color: white;
-    }
-
-    footer p {
-      margin: 5px;
-    }
-
-    @media (max-width: 600px) {
-      header {
-        padding: 25px 15px;
-      }
-
-      header h1 {
-        font-size: 1.7rem;
-      }
-
-      section {
-        margin: 20px 12px;
-        padding: 18px;
-      }
-
-      nav a {
-        margin: 5px;
-      }
-    }
+    :root{--bg:#080d1a;--surface:#10182b;--surface-2:#141f36;--text:#f4f7ff;--muted:#aab5cc;--blue:#6ea8fe;--violet:#a78bfa;--cyan:#67e8f9;--line:rgba(173,190,224,.15);--shadow:0 22px 55px rgba(0,0,0,.22)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}body{margin:0;background:radial-gradient(ellipse at 15% 0%,rgba(61,91,180,.18),transparent 35%),radial-gradient(ellipse at 95% 25%,rgba(126,74,207,.12),transparent 30%),var(--bg);color:var(--text);font-family:Inter,"Segoe UI",Tahoma,sans-serif;line-height:1.7}a{color:inherit;overflow-wrap:anywhere}button,input{font:inherit}.container{width:min(1140px,calc(100% - 40px));margin:auto}
+    .site-header{position:sticky;top:0;z-index:20;background:rgba(8,13,26,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.nav-wrap{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-weight:800;font-size:1.12rem;letter-spacing:-.04em;text-decoration:none}.brand span{color:var(--blue)}nav{display:flex;gap:26px;align-items:center}nav a{color:var(--muted);font-size:.93rem;text-decoration:none;transition:.2s}nav a:hover,nav a:focus{color:var(--text)}.nav-cta{border:1px solid rgba(110,168,254,.45);padding:8px 15px;border-radius:999px;color:var(--text)}
+    .hero{padding:100px 0 88px;position:relative;overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.45fr .75fr;align-items:center;gap:56px}.eyebrow{display:inline-flex;align-items:center;gap:9px;color:#c8d7f5;border:1px solid var(--line);background:rgba(16,24,43,.75);padding:7px 13px;border-radius:999px;font-size:.84rem}.status-dot{width:8px;height:8px;background:#5eead4;border-radius:50%;box-shadow:0 0 14px #5eead4}.hero h1{font-size:clamp(2.6rem,6vw,5rem);line-height:1.08;letter-spacing:-.065em;margin:23px 0 18px;max-width:800px}.gradient-text{background:linear-gradient(100deg,var(--blue),var(--violet),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{max-width:670px;color:var(--muted);font-size:1.08rem}.hero-actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 19px;border-radius:12px;text-decoration:none;font-weight:700;font-size:.94rem;transition:transform .2s,box-shadow .2s,border-color .2s}.btn:hover{transform:translateY(-3px)}.btn-primary{color:#07101f;background:linear-gradient(110deg,var(--blue),var(--cyan));box-shadow:0 10px 30px rgba(103,183,254,.18)}.btn-secondary{border:1px solid var(--line);background:rgba(255,255,255,.035)}.hero-panel{border:1px solid var(--line);border-radius:28px;padding:27px;background:linear-gradient(145deg,rgba(20,31,54,.95),rgba(12,19,35,.92));box-shadow:var(--shadow);position:relative}.hero-panel:before{content:"";position:absolute;inset:-1px;border-radius:28px;padding:1px;background:linear-gradient(140deg,rgba(110,168,254,.55),transparent 45%,rgba(167,139,250,.35));-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}.panel-top{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:.82rem}.panel-icon{font-size:2rem}.hero-panel h2{font-size:1.3rem;margin:20px 0 7px}.hero-panel p{font-size:.92rem;margin:0}.focus-list{display:grid;gap:12px;margin-top:24px}.focus-item{display:flex;align-items:center;gap:12px;padding:11px 12px;border:1px solid var(--line);border-radius:12px;color:#dce6fa;font-size:.9rem;background:rgba(255,255,255,.025)}.focus-item span:first-child{font-size:1.1rem}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:42px;max-width:700px}.stat{padding:15px 17px;border:1px solid var(--line);border-radius:15px;background:rgba(255,255,255,.025)}.stat strong{display:block;font-size:1.4rem;letter-spacing:-.04em}.stat span{color:var(--muted);font-size:.82rem}
+    section{padding:78px 0}.section-heading{max-width:720px;margin-bottom:30px}.section-kicker{text-transform:uppercase;letter-spacing:.17em;color:var(--cyan);font-size:.76rem;font-weight:800}.section-heading h2{font-size:clamp(2rem,4vw,3rem);line-height:1.15;letter-spacing:-.05em;margin:10px 0}.section-heading p{color:var(--muted);margin:0}.about-card{display:grid;grid-template-columns:1.3fr .7fr;gap:32px;padding:32px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(135deg,rgba(16,24,43,.9),rgba(14,21,38,.65))}.about-card p{color:var(--muted);margin-top:0}.about-note{border-left:2px solid var(--violet);padding:4px 0 4px 20px;color:#dce6fa}.about-note strong{display:block;margin-bottom:8px;color:var(--text)}
+    .project-tools{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;margin:28px 0 22px}.filter-group{display:flex;gap:8px;flex-wrap:wrap}.filter-btn{background:rgba(255,255,255,.035);border:1px solid var(--line);color:var(--muted);padding:8px 13px;border-radius:999px;cursor:pointer;font-size:.84rem;transition:.2s}.filter-btn:hover,.filter-btn.active{color:var(--text);border-color:rgba(110,168,254,.65);background:rgba(110,168,254,.13)}.search-box{min-width:min(100%,250px);padding:10px 14px;border-radius:12px;background:var(--surface);border:1px solid var(--line);color:var(--text);outline:none}.search-box:focus{border-color:var(--blue)}.projects-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:19px}.project-card{min-width:0;display:flex;flex-direction:column;padding:25px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(155deg,rgba(17,26,46,.96),rgba(12,19,34,.96));transition:transform .25s,border-color .25s,box-shadow .25s;position:relative;overflow:hidden}.project-card:before{content:"";position:absolute;top:0;left:0;width:100%;height:2px;background:linear-gradient(90deg,var(--blue),var(--violet),transparent);opacity:.75}.project-card:hover{transform:translateY(-5px);border-color:rgba(110,168,254,.38);box-shadow:var(--shadow)}.project-card h3{font-size:1.18rem;line-height:1.4;letter-spacing:-.025em;margin:0 0 14px;color:var(--text)}.project-card p{font-size:.92rem;color:var(--muted);margin:8px 0}.project-card p b{color:#e7edfb}.project-card .project-type{display:inline-flex;align-self:flex-start;margin:0 0 13px;padding:5px 10px;border-radius:999px;background:rgba(167,139,250,.11);border:1px solid rgba(167,139,250,.2);color:#cbbcff;font-size:.75rem;font-weight:700}.project-card .tech-stack{font-size:.83rem;padding-top:12px;border-top:1px solid var(--line);margin-top:auto}.project-card .project-link{display:inline-flex;align-items:center;gap:7px;width:max-content;max-width:100%;margin-top:15px;padding:9px 13px;border-radius:10px;border:1px solid rgba(110,168,254,.3);background:rgba(110,168,254,.08);color:#bcd6ff;font-size:.85rem;font-weight:700;text-decoration:none;transition:.2s}.project-card .project-link:hover{background:rgba(110,168,254,.17);color:white}.project-card a:not(.project-link){color:var(--cyan)}.card-bottom{display:flex;justify-content:flex-end;margin-top:14px}.category-label{color:#9fb0ce;font-size:.74rem;border:1px solid var(--line);padding:4px 9px;border-radius:999px}.project-card[hidden]{display:none}
+    .skills-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.skill-group{padding:24px;border:1px solid var(--line);border-radius:18px;background:rgba(16,24,43,.75)}.skill-group h3{margin:0 0 16px;font-size:1rem}.skill-pills{display:flex;flex-wrap:wrap;gap:9px}.skill-pill{padding:7px 11px;border-radius:9px;background:rgba(110,168,254,.08);border:1px solid rgba(110,168,254,.15);color:#d4e1fa;font-size:.84rem}
+    .contact-card{display:flex;justify-content:space-between;align-items:center;gap:28px;padding:34px;border:1px solid var(--line);border-radius:23px;background:radial-gradient(ellipse at 100% 0%,rgba(110,168,254,.14),transparent 45%),var(--surface)}.contact-card h2{font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:-.05em;line-height:1.2;margin:8px 0 10px}.contact-card p{color:var(--muted);margin:0}.contact-links{display:flex;flex-direction:column;gap:10px;min-width:270px}.contact-links a{padding:10px 12px;border:1px solid var(--line);border-radius:10px;text-decoration:none;color:#dce6fa;font-size:.88rem;transition:.2s}.contact-links a:hover{border-color:var(--blue);background:rgba(110,168,254,.08)}footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:.84rem}footer .footer-inner{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}footer a{color:#dce6fa;text-decoration:none}
+    @media(max-width:850px){.hero-grid{grid-template-columns:1fr;gap:32px}.hero-panel{max-width:560px}.hero{padding-top:72px}.about-card{grid-template-columns:1fr}.projects-grid{grid-template-columns:1fr}.contact-card{align-items:flex-start;flex-direction:column}.contact-links{width:100%;min-width:0}}
+    @media(max-width:600px){.container{width:min(100% - 28px,1140px)}.nav-wrap{padding:14px 0;align-items:flex-start;flex-direction:column;gap:10px}.site-header{position:relative}nav{gap:16px;flex-wrap:wrap}nav a{font-size:.85rem}.nav-cta{padding:5px 10px}.hero{padding:62px 0 50px}.hero h1{font-size:2.65rem}.hero p{font-size:1rem}.stats{grid-template-columns:1fr;gap:9px}.stat{display:flex;justify-content:space-between;align-items:center}.stat strong{font-size:1.2rem}.stat span{text-align:right}section{padding:55px 0}.about-card,.project-card,.contact-card{padding:21px}.skills-grid{grid-template-columns:1fr}.project-tools{align-items:stretch;flex-direction:column}.search-box{width:100%}.section-heading h2{font-size:2.1rem}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
   </style>
 </head>
-
 <body>
-
-  <!-- Header -->
-  <header>
-    <h1>Hello, I'm Nehansa Wijewardhana 👋</h1>
-    <p>💻 Data Science Student | 🌐 Web Developer | 🤖 AI Enthusiast</p>
-
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home">Nehansa<span>.</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a class="nav-cta" href="#contact">Contact ↗</a>
+      </nav>
+    </div>
   </header>
-
-  <!-- About -->
-  <section id="about">
-    <h2>About Me</h2>
-
-    <p>
-      I'm currently studying <b>BSc Hons in Data Science</b> at the Faculty
-      of Computing, Sabaragamuwa University of Sri Lanka. I'm passionate about
-      <b>AI, Web Development, and Data Science</b>. I enjoy building projects
-      that solve real-world problems and make life easier for people.
-      <br><br>
-      🚀 My goal is to become a
-      <b>Full-Stack Developer and Data Engineer</b> who can bridge the gap
-      between data and technology through impactful solutions.
-    </p>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects">
-    <h2>Projects</h2>
-
-    <p class="section-intro">
-      Explore my academic, machine learning, data analytics, and full-stack
-      development projects.
-    </p>
-
-    <!-- Existing Project 1 -->
-    <div class="project-card">
-      <h3>📌 Doc &amp; Test Hub</h3>
-
-      <p>
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow"><span class="status-dot"></span> Data Science Undergraduate · Sri Lanka</span>
+          <h1>Turning data into <span class="gradient-text">meaningful solutions.</span></h1>
+          <p>Hi, I’m Nehansa Wijewardhana — a Data Science undergraduate passionate about machine learning, AI, analytics, and building useful web applications. I enjoy turning ideas and data into practical solutions to real-world problems.</p>
+          <div class="hero-actions"><a class="btn btn-primary" href="#projects">Explore my projects <span aria-hidden="true">↘</span></a><a class="btn btn-secondary" href="https://www.linkedin.com/in/nehansa-wijewardhana-638649337/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a></div>
+          <div class="stats"><div class="stat"><strong>10</strong><span>Featured projects</span></div><div class="stat"><strong>AI + Data</strong><span>Core interests</span></div><div class="stat"><strong>Build · Learn</strong><span>My approach</span></div></div>
+        </div>
+        <aside class="hero-panel">
+          <div class="panel-top"><span>MY FOCUS</span><span class="panel-icon" aria-hidden="true">✦</span></div>
+          <h2>Curious by nature. Data-driven by design.</h2>
+          <p>Exploring the intersection of data, intelligent systems, and user-friendly applications.</p>
+          <div class="focus-list"><div class="focus-item"><span>🧠</span><span>Machine Learning & AI</span></div><div class="focus-item"><span>📊</span><span>Data Analytics & Forecasting</span></div><div class="focus-item"><span>💻</span><span>Full-Stack Development</span></div><div class="focus-item"><span>☁️</span><span>Cloud-based Data Solutions</span></div></div>
+        </aside>
+      </div>
+    </section>
+    <section id="about">
+      <div class="container">
+        <div class="section-heading"><span class="section-kicker">A little about me</span><h2>Building with curiosity and purpose.</h2><p>My background combines analytical thinking with practical software development.</p></div>
+        <div class="about-card"><div><p>I’m currently studying <strong>BSc (Hons) in Data Science</strong> at the Faculty of Computing, Sabaragamuwa University of Sri Lanka. I’m passionate about <strong>AI, web development, and data science</strong>, and I enjoy building projects that solve real-world problems and make life easier for people.</p><p>Through academic and personal projects, I’ve explored machine learning, time-series forecasting, natural language processing, data visualization, and full-stack applications.</p></div><div class="about-note"><strong>My career goal</strong>To become a Data Engineer who bridges the gap between data and technology through reliable, impactful solutions.</div></div>
+      </div>
+    </section>
+    <section id="projects">
+      <div class="container">
+        <div class="section-heading"><span class="section-kicker">Selected work</span><h2>Projects I’ve worked on.</h2><p>Explore my academic, machine learning, analytics, cloud, and full-stack development projects.</p></div>
+        <div class="project-tools"><div class="filter-group" role="group" aria-label="Filter projects"><button class="filter-btn active" data-filter="all" type="button">All projects</button><button class="filter-btn" data-filter="Machine Learning" type="button">Machine Learning</button><button class="filter-btn" data-filter="Data Analytics" type="button">Data Analytics</button><button class="filter-btn" data-filter="Full-Stack" type="button">Full-Stack</button><button class="filter-btn" data-filter="AI & NLP" type="button">AI & NLP</button><button class="filter-btn" data-filter="Cloud & ML" type="button">Cloud & ML</button></div><input class="search-box" id="projectSearch" type="search" placeholder="Search projects…" aria-label="Search projects"></div>
+        <div class="projects-grid" id="projectsGrid">
+          <article class="project-card" data-category="Full-Stack" data-title="📌 doc & test hub">
+<h3>📌 Doc &amp; Test Hub</h3>
+<p>
         A full-stack web application built using
         <b>React, Django, and MySQL</b> that allows patients to book doctor
         appointments and schedule medical tests. Features include
         <b>real-time slot availability, appointment reminders, secure payments,
         and test requirement validation</b>.
       </p>
-
-      <p class="tech-stack">
-        <b>Technologies:</b> React, Django, MySQL
+<p class="tech-stack">
+<b>Technologies:</b> React, Django, MySQL
       </p>
-
-      <a class="project-link"
-         href="https://github.com/nehansa2003/Doc-Test-Hub"
-         target="_blank" rel="noopener noreferrer">
+<a class="project-link" href="https://github.com/nehansa2003/Doc-Test-Hub" rel="noopener noreferrer" target="_blank">
         View GitHub Repository →
       </a>
-    </div>
-
-    <!-- Existing Project 2 -->
-    <div class="project-card">
-      <h3>📌 To-Do Task Manager</h3>
-
-      <p>
+<div class="card-bottom"><span class="category-label">Full-Stack</span></div></article>
+<article class="project-card" data-category="Python" data-title="📌 to-do task manager">
+<h3>📌 To-Do Task Manager</h3>
+<p>
         A Python-based command-line application designed for productivity.
         Supports <b>task creation, deadlines, task updates, and JSON-based
         data persistence</b>. Developed using object-oriented programming
         concepts.
       </p>
-
-      <p class="tech-stack">
-        <b>Technologies:</b> Python, JSON, Object-Oriented Programming
+<p class="tech-stack">
+<b>Technologies:</b> Python, JSON, Object-Oriented Programming
       </p>
-
-      <a class="project-link"
-         href="https://github.com/nehansa2003/To-Do-Task-Manager-python-program"
-         target="_blank" rel="noopener noreferrer">
+<a class="project-link" href="https://github.com/nehansa2003/To-Do-Task-Manager-python-program" rel="noopener noreferrer" target="_blank">
         View GitHub Repository →
       </a>
-    </div>
-
-    <!-- Existing Project 3 -->
-    <div class="project-card">
-      <h3>📌 SoulPrint: 16-Trait Personality Tracker</h3>
-
-      <p>
+<div class="card-bottom"><span class="category-label">Python</span></div></article>
+<article class="project-card" data-category="Web Development" data-title="📌 soulprint: 16-trait personality tracker">
+<h3>📌 SoulPrint: 16-Trait Personality Tracker</h3>
+<p>
         A web-based personality predictor that generates a
         <b>16-trait personality report in PDF format</b> using JavaScript
         and jsPDF. The report includes a personality summary, strengths,
         weaknesses, motivational quotes, and styled visuals.
       </p>
-
-      <p>
-        <b>Key Features:</b> Personalized summaries, bullet-point strengths
+<p>
+<b>Key Features:</b> Personalized summaries, bullet-point strengths
         and weaknesses, motivational quotes, a calm pastel PDF background,
         and an optional footer image.
       </p>
-
-      <p class="tech-stack">
-        <b>Technologies:</b> JavaScript, jsPDF, HTML, CSS
+<p class="tech-stack">
+<b>Technologies:</b> JavaScript, jsPDF, HTML, CSS
       </p>
-
-      <a class="project-link"
-         href="https://github.com/nehansa2003/SoulPrint"
-         target="_blank" rel="noopener noreferrer">
+<a class="project-link" href="https://github.com/nehansa2003/SoulPrint" rel="noopener noreferrer" target="_blank">
         View GitHub Repository →
       </a>
-    </div>
-
-    <!-- Existing Project 4 -->
-    <div class="project-card">
-      <h3>📌 Smart Waste Tracker: Full-Stack Waste Management System</h3>
-
-      <span class="project-type">Group Project</span>
-
-      <p>
+<div class="card-bottom"><span class="category-label">Web Development</span></div></article>
+<article class="project-card" data-category="Full-Stack" data-title="📌 smart waste tracker: full-stack waste management system">
+<h3>📌 Smart Waste Tracker: Full-Stack Waste Management System</h3>
+<span class="project-type">Group Project</span>
+<p>
         A full-stack waste management and analytics platform developed
         collaboratively with two colleagues. The system supports
         <b>waste category tracking, waste amount recording, bin status
         monitoring, available bin visibility, public waste-category search,
         route optimization, and location-based waste management</b>.
       </p>
-
-      <p>
-        <b>Key Features:</b> Area-wise and category-wise reports, daily,
+<p>
+<b>Key Features:</b> Area-wise and category-wise reports, daily,
         weekly, monthly, and yearly analytics, waste trend visualizations,
         interactive dashboard charts, a responsive admin panel, and
         PDF report generation for decision support.
       </p>
-
-      <p class="tech-stack">
-        <b>Technologies:</b> PHP, MySQL, JavaScript, Tailwind CSS, Chart.js
+<p class="tech-stack">
+<b>Technologies:</b> PHP, MySQL, JavaScript, Tailwind CSS, Chart.js
       </p>
-
-      <a class="project-link"
-         href="https://github.com/nehansa2003/Smart-Waste-Management-Tracker"
-         target="_blank" rel="noopener noreferrer">
+<a class="project-link" href="https://github.com/nehansa2003/Smart-Waste-Management-Tracker" rel="noopener noreferrer" target="_blank">
         View GitHub Repository →
       </a>
-    </div>
-
-    <!-- Existing Project 5 -->
-    <div class="project-card">
-      <h3>📌 Student Stress Level Prediction – Data Analysis Project</h3>
-
-      <p>
+<div class="card-bottom"><span class="category-label">Full-Stack</span></div></article>
+<article class="project-card" data-category="Machine Learning" data-title="📌 student stress level prediction – data analysis project">
+<h3>📌 Student Stress Level Prediction – Data Analysis Project</h3>
+<p>
         A data-driven project analyzing factors affecting student stress
         levels. The project involved <b>data cleaning, feature engineering,
         outlier detection, standardization, and normalization</b>.
         New features included Study Efficiency, Sleep Stress Risk,
         Study Burden Index, and Study–Sleep Balance.
       </p>
-
-      <p>
-        <b>Key Features:</b> Training and evaluation of multiple machine
+<p>
+<b>Key Features:</b> Training and evaluation of multiple machine
         learning models, actual-versus-predicted visualizations, error
         distribution analysis, and a Flask web application that predicts
         stress levels from academic and lifestyle inputs.
       </p>
-
-      <p class="tech-stack">
-        <b>Technologies:</b> Python, Pandas, Scikit-learn, Flask,
+<p class="tech-stack">
+<b>Technologies:</b> Python, Pandas, Scikit-learn, Flask,
         Matplotlib, Seaborn
       </p>
-
-      <a class="project-link"
-         href="https://github.com/nehansa2003/Student-StressLevel-Prediction-Analysis"
-         target="_blank" rel="noopener noreferrer">
+<a class="project-link" href="https://github.com/nehansa2003/Student-StressLevel-Prediction-Analysis" rel="noopener noreferrer" target="_blank">
         View GitHub Repository →
       </a>
-    </div>
-
-    <!-- New Project 1: Sales Forecasting -->
-    <div class="project-card">
-      <h3>📈 Time Series Sales Forecasting</h3>
-
-      <span class="project-type">Time Series Analysis</span>
-
-      <p>
+<div class="card-bottom"><span class="category-label">Machine Learning</span></div></article>
+<article class="project-card" data-category="Data Analytics" data-title="📈 time series sales forecasting">
+<h3>📈 Time Series Sales Forecasting</h3>
+<span class="project-type">Time Series Analysis</span>
+<p>
         A time series analysis project focused on identifying sales trends,
         seasonality, and variability in historical sales data and forecasting
         future monthly sales. Order data was aggregated into monthly sales
         values for statistical analysis and model development.
       </p>
-
-      <p>
-        <b>Key Features:</b> Exploratory time series analysis, rolling mean
+<p>
+<b>Key Features:</b> Exploratory time series analysis, rolling mean
         and variance analysis, seasonal decomposition, stationarity testing
         using the Augmented Dickey-Fuller test, and comparison of forecasting
         models using information criteria and residual diagnostics.
       </p>
-
-      <p>
+<p>
         The project compares <b>ARIMA, SARIMA, and Holt–Winters Exponential
         Smoothing</b>. According to the project evaluation, SARIMA achieved
         the lowest AIC and BIC values among the evaluated models, with
         well-behaved residuals.
       </p>
-
-      <p class="tech-stack">
-        <b>Technologies:</b> Python, Pandas, NumPy, Matplotlib,
+<p class="tech-stack">
+<b>Technologies:</b> Python, Pandas, NumPy, Matplotlib,
         Statsmodels, Jupyter Notebook
       </p>
-      <a class="project-link"
-         href=" https://github.com/nehansa2003/Amazon-sales-analysis"
-         target="_blank" rel="noopener noreferrer">
+<a class="project-link" href="https://github.com/nehansa2003/Amazon-sales-analysis" rel="noopener noreferrer" target="_blank">
         View GitHub Repository →
       </a>
-     
-    </div>
-
-    <!-- New Project 2: Game Review Intelligence -->
-    <div class="project-card">
-      <h3>🎮 Game Review Intelligence</h3>
-
-      <span class="project-type">Natural Language Processing</span>
-
-      <p>
+<div class="card-bottom"><span class="category-label">Data Analytics</span></div></article>
+<article class="project-card" data-category="AI & NLP" data-title="🎮 game review intelligence">
+<h3>🎮 Game Review Intelligence</h3>
+<span class="project-type">Natural Language Processing</span>
+<p>
         An NLP-based system that analyzes video game reviews to generate
         meaningful insights about player opinions, sentiment, and game
         features. The project covers <b>2,000 video games and 100,027
         processed reviews</b>.
       </p>
-
-      <p>
-        <b>Key Features:</b> Positive, neutral, and negative sentiment
+<p>
+<b>Key Features:</b> Positive, neutral, and negative sentiment
         classification, aspect frequency and sentiment analysis, automatic
         key phrase extraction, advantages and disadvantages identification,
         key review points, and game-to-game comparisons.
       </p>
-
-      <p>
+<p>
         The project compares Balanced Logistic Regression, Balanced Linear
         SVM, and DistilBERT. DistilBERT is used as the final sentiment model,
         with threshold optimization to improve minority-class detection.
         An interactive Gradio dashboard presents the review insights.
       </p>
-
-      <p class="tech-stack">
-        <b>Technologies:</b> Python, Pandas, NumPy, Scikit-learn,
+<p class="tech-stack">
+<b>Technologies:</b> Python, Pandas, NumPy, Scikit-learn,
         Transformers, DistilBERT, YAKE, Plotly, Gradio, Google Colab
       </p>
-
-      <p>
-        <b>Dataset:</b>
-        <a href="https://drive.google.com/file/d/19dgBjbdSuQQImXy6ePW9v0Z895MfM60b/view?usp=drive_link"
-           target="_blank" rel="noopener noreferrer">
+<p>
+<b>Dataset:</b>
+<a href="https://drive.google.com/file/d/19dgBjbdSuQQImXy6ePW9v0Z895MfM60b/view?usp=drive_link" rel="noopener noreferrer" target="_blank">
           Access the raw dataset on Google Drive
         </a>
-      </p>
-      <a class="project-link"
-         href="https://github.com/nehansa2003/Video_Game-Review-intelligence"
-         target="_blank" rel="noopener noreferrer">
+</p>
+<a class="project-link" href="https://github.com/nehansa2003/Video_Game-Review-intelligence" rel="noopener noreferrer" target="_blank">
         View GitHub Repository →
       </a>
-      
-    </div>
-
-    <!-- New Project 3: Sri Lanka Economic Analysis -->
-    <div class="project-card">
-      <h3>📊 Sri Lanka Economic Crisis &amp; Recovery | 2018–2024</h3>
-
-      <span class="project-type">Power BI &amp; Data Analytics</span>
-
-      <p>
+<div class="card-bottom"><span class="category-label">AI & NLP</span></div></article>
+<article class="project-card" data-category="Data Analytics" data-title="📊 sri lanka economic crisis & recovery | 2018–2024">
+<h3>📊 Sri Lanka Economic Crisis &amp; Recovery | 2018–2024</h3>
+<span class="project-type">Power BI &amp; Data Analytics</span>
+<p>
         An economic data analysis project examining Sri Lanka's economic
         crisis and recovery from 2018 to 2024 using Microsoft Power BI.
         The dashboard explores economic trends and indicators to understand
         the impact of the crisis and signs of economic stabilization.
       </p>
-
-      <p>
-        <b>Key Areas Analysed:</b> Inflation, cost of living, food and fuel
+<p>
+<b>Key Areas Analysed:</b> Inflation, cost of living, food and fuel
         prices, exchange rates, exports, imports, tourism, workers'
         remittances, GDP growth, unemployment, and interest rates.
       </p>
-
-      <p>
-        <b>Key Features:</b> Interactive dashboard, executive overview,
+<p>
+<b>Key Features:</b> Interactive dashboard, executive overview,
         KPI cards, economic crisis timeline, inflation and cost-of-living
         analysis, external-sector analysis, and economic growth, employment,
         and monetary-condition visualizations.
       </p>
-
-      <p>
+<p>
         The project involved collecting raw datasets, selecting relevant
         records and columns, cleaning and standardizing data, and preparing
         six datasets for Power BI analysis.
       </p>
-
-      <p class="tech-stack">
-        <b>Technologies:</b> Microsoft Power BI, DAX, Microsoft Excel,
+<p class="tech-stack">
+<b>Technologies:</b> Microsoft Power BI, DAX, Microsoft Excel,
         Data Cleaning, Data Visualization
       </p>
-     <a class="project-link"
-         href="https://github.com/nehansa2003/Sri-Lanka-Economic-Crisis-Recovery-2018-2024--PowerBI"
-         target="_blank" rel="noopener noreferrer">
+<a class="project-link" href="https://github.com/nehansa2003/Sri-Lanka-Economic-Crisis-Recovery-2018-2024--PowerBI" rel="noopener noreferrer" target="_blank">
         View GitHub Repository →
       </a>
-     
-    </div>
-
-    <!-- New Project 4: Weather Capstone -->
-    <div class="project-card">
-      <h3>🌦️ Weather Analysis &amp; Localized Next-Hour Weather Forecasting System </h3>
-
-      <span class="project-type">BSc (Hons) Data Science Capstone </span>
-
-      <p>
+<div class="card-bottom"><span class="category-label">Data Analytics</span></div></article>
+<article class="project-card" data-category="Machine Learning" data-title="🌦️ weather analysis & localized next-hour weather forecasting system">
+<h3>🌦️ Weather Analysis &amp; Localized Next-Hour Weather Forecasting System </h3>
+<span class="project-type">BSc (Hons) Data Science Capstone </span>
+<p>
         A collaborative capstone project focused on historical weather
         analysis and next-hour weather forecasting using hourly weather
         data from 2020 to 2025 across five Sri Lankan districts:
         Colombo, Gampaha, Galle, Kandy, and Jaffna.
       </p>
-
-      <p>
+<p>
         The project includes an <b>LSTM-based multi-output forecasting
         model</b> that uses the previous 24 hours of observations to predict
         the next hour's weather conditions for Colombo.
       </p>
-
-      <p>
-        <b>Forecasting Variables:</b> Temperature, humidity, pressure,
+<p>
+<b>Forecasting Variables:</b> Temperature, humidity, pressure,
         wind speed, rainfall, wind gust, cloud cover, solar radiation,
         and dew point.
       </p>
-
-      <p>
-        <b>Key Features:</b> Historical weather analysis, geographical
+<p>
+<b>Key Features:</b> Historical weather analysis, geographical
         point selection, current weather information, next-hour forecasting,
         model evaluation results, and rain/no-rain performance analysis
         through a Streamlit dashboard.
       </p>
-
-      <p>
+<p>
         The dataset was divided chronologically into training data
         (2020–2023), validation data (2024), and testing data (2025).
         The dashboard identifies the nearest predefined Colombo
         geographical point for forecasting.
       </p>
-
-      <p class="tech-stack">
-        <b>Technologies:</b> Python, Pandas, NumPy, Scikit-learn,
+<p class="tech-stack">
+<b>Technologies:</b> Python, Pandas, NumPy, Scikit-learn,
         TensorFlow/Keras, Streamlit, Matplotlib, Seaborn, Open-Meteo API
       </p>
-      <a class="project-link"
-         href="https://github.com/nehansa2003/Weather-Forecasting-and-Analysis-Using-LSTM"
-         target="_blank" rel="noopener noreferrer">
+<a class="project-link" href="https://github.com/nehansa2003/Weather-Forecasting-and-Analysis-Using-LSTM" rel="noopener noreferrer" target="_blank">
         View GitHub Repository →
       </a>
-      
-    </div>
-
-    <!-- New Project 5: ChurnIQ -->
-    <div class="project-card">
-      <h3>☁️ ChurnIQ: Enterprise Customer Churn Prediction &amp; Analytics</h3>
-
-      <span class="project-type">Group Project · Machine Learning &amp; AWS</span>
-
-      <p>
+<div class="card-bottom"><span class="category-label">Machine Learning</span></div></article>
+<article class="project-card" data-category="Cloud & ML" data-title="☁️ churniq: enterprise customer churn prediction & analytics">
+<h3>☁️ ChurnIQ: Enterprise Customer Churn Prediction &amp; Analytics</h3>
+<span class="project-type">Group Project · Machine Learning &amp; AWS</span>
+<p>
         An end-to-end cloud-based machine learning and customer analytics
         solution designed to identify customers at risk of leaving a
         retail business. The system uses a dataset of
         <b>100,000 retail customers</b> and combines predictive analytics,
         serverless data processing, and interactive business intelligence.
       </p>
-
-      <p>
-        <b>Machine Learning:</b> Compared Logistic Regression, Gradient
+<p>
+<b>Machine Learning:</b> Compared Logistic Regression, Gradient
         Boosting, Random Forest, and Extra Trees. The selected Logistic
         Regression pipeline achieved <b>94.59% test accuracy and
         99.04% ROC-AUC</b>, according to the project's evaluation.
       </p>
-
-      <p>
-        <b>Cloud Data Pipeline:</b> Amazon S3 stores incoming and processed
+<p>
+<b>Cloud Data Pipeline:</b> Amazon S3 stores incoming and processed
         data, AWS Lambda validates uploaded datasets, CloudWatch supports
         execution monitoring, and Amazon Athena enables SQL-based analytics.
       </p>
-
-      <p>
-        <b>Key Features:</b> Customer churn prediction, churn probability
+<p>
+<b>Key Features:</b> Customer churn prediction, churn probability
         scoring, customer risk visualization, business SQL analytics,
         automated data validation, and an interactive dashboard with
         actionable customer retention insights.
       </p>
-
-      <p class="tech-stack">
-        <b>Technologies:</b> Python 3.11, Pandas, Scikit-learn, FastAPI,
+<p class="tech-stack">
+<b>Technologies:</b> Python 3.11, Pandas, Scikit-learn, FastAPI,
         Streamlit, Plotly, AWS S3, AWS Lambda, Amazon CloudWatch,
         Amazon Athena, Docker
       </p>
-
-      <a class="project-link"
-         href="https://github.com/nehansa2003/AWS_Project"
-         target="_blank" rel="noopener noreferrer">
+<a class="project-link" href="https://github.com/nehansa2003/AWS_Project" rel="noopener noreferrer" target="_blank">
         View GitHub Repository →
       </a>
-    </div>
-
-  </section>
-
-  <!-- Skills -->
-  <section id="skills" class="skills">
-    <h2>Skills</h2>
-
-    <ul>
-      <li>Python</li>
-      <li>Java</li>
-      <li>JavaScript</li>
-      <li>React</li>
-      <li>Django</li>
-      <li>MySQL</li>
-      <li>PHP</li>
-      <li>Git &amp; GitHub</li>
-      <li>Machine Learning &amp; Deep Learning</li>
-      <li>Data Analysis &amp; Data Visualization</li>
-      <li>Time Series Analysis &amp; Forecasting</li>
-      <li>Natural Language Processing (NLP)</li>
-      <li>TensorFlow / Keras</li>
-      <li>Microsoft Power BI &amp; DAX</li>
-      <li>Streamlit &amp; Flask</li>
-      <li>AWS Cloud Services</li>
-      <li>SQL &amp; Data Management</li>
-    </ul>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-
-    <p>
-      Email:
-      <a href="mailto:nehansawijewardhana@gmail.com">
-        nehansawijewardhana@gmail.com
-      </a>
-    </p>
-
-    <p>
-      LinkedIn:
-      <a href="https://www.linkedin.com/in/nehansa-wijewardhana-638649337/"
-         target="_blank" rel="noopener noreferrer">
-        linkedin.com/in/nehansa-wijewardhana
-      </a>
-    </p>
-
-    <p>
-      GitHub:
-      <a href="https://github.com/nehansa2003"
-         target="_blank" rel="noopener noreferrer">
-        github.com/nehansa2003
-      </a>
-    </p>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2026 Nehansa | Built with ❤️ and GitHub Pages</p>
-    <p>Designed to grow as I learn &amp; build 🚀</p>
-  </footer>
-
+<div class="card-bottom"><span class="category-label">Cloud & ML</span></div></article>
+        </div>
+        <p id="noResults" hidden style="color:var(--muted);padding:22px 0">No projects match your search. Try another keyword or category.</p>
+      </div>
+    </section>
+    <section id="skills">
+      <div class="container">
+        <div class="section-heading"><span class="section-kicker">My toolkit</span><h2>Skills & technologies.</h2><p>Tools and technologies I use across data, AI, and application development.</p></div>
+        <div class="skills-grid"><div class="skill-group"><h3>Programming</h3><div class="skill-pills"><span class="skill-pill">Python</span><span class="skill-pill">Java</span><span class="skill-pill">JavaScript</span><span class="skill-pill">PHP</span><span class="skill-pill">SQL</span></div></div><div class="skill-group"><h3>Web Development</h3><div class="skill-pills"><span class="skill-pill">React</span><span class="skill-pill">Django</span><span class="skill-pill">Flask</span><span class="skill-pill">HTML & CSS</span><span class="skill-pill">Streamlit</span></div></div><div class="skill-group"><h3>Data & AI</h3><div class="skill-pills"><span class="skill-pill">Machine Learning</span><span class="skill-pill">Deep Learning</span><span class="skill-pill">Natural Language Processing</span><span class="skill-pill">Time Series Forecasting</span><span class="skill-pill">Data Analysis</span><span class="skill-pill">Data Visualization</span></div></div><div class="skill-group"><h3>Tools & Platforms</h3><div class="skill-pills"><span class="skill-pill">Git & GitHub</span><span class="skill-pill">MySQL</span><span class="skill-pill">TensorFlow / Keras</span><span class="skill-pill">Power BI & DAX</span><span class="skill-pill">AWS Cloud Services</span></div></div></div>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="container"><div class="contact-card"><div><span class="section-kicker">Let’s connect</span><h2>Have a project or opportunity in mind?</h2><p>I’d be happy to connect, collaborate, and learn from new challenges.</p><div class="hero-actions"><a class="btn btn-primary" href="mailto:nehansawijewardhana@gmail.com">Send me an email ↗</a></div></div><div class="contact-links"><a href="mailto:nehansawijewardhana@gmail.com">✉ &nbsp; nehansawijewardhana@gmail.com</a><a href="https://www.linkedin.com/in/nehansa-wijewardhana-638649337/" target="_blank" rel="noopener noreferrer">in &nbsp; LinkedIn profile ↗</a><a href="https://github.com/nehansa2003" target="_blank" rel="noopener noreferrer">⌘ &nbsp; GitHub profile ↗</a></div></div></div>
+    </section>
+  </main>
+  <footer><div class="container footer-inner"><span>© 2026 Nehansa Wijewardhana · Built with curiosity ✦</span><a href="#home">Back to top ↑</a></div></footer>
+  <script>
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.project-card');
+    const searchInput = document.getElementById('projectSearch');
+    const noResults = document.getElementById('noResults');
+    let activeFilter = 'all';
+    function updateProjects(){
+      const term = searchInput.value.trim().toLowerCase();
+      let visible = 0;
+      cards.forEach(card => {
+        const categoryMatch = activeFilter === 'all' || card.dataset.category === activeFilter;
+        const textMatch = (card.innerText + ' ' + card.dataset.title).toLowerCase().includes(term);
+        const show = categoryMatch && textMatch;
+        card.hidden = !show;
+        if(show) visible++;
+      });
+      noResults.hidden = visible !== 0;
+    }
+    filterButtons.forEach(button => button.addEventListener('click', () => {
+      activeFilter = button.dataset.filter;
+      filterButtons.forEach(item => item.classList.toggle('active', item === button));
+      updateProjects();
+    }));
+    searchInput.addEventListener('input', updateProjects);
+  </script>
 </body>
 </html>
